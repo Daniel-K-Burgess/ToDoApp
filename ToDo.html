@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo App</title>
+    <!--Linking the bootstrap css stylesheet-->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+<!--Containers using cards and rows and columns-->
+<body class="container">
+    <br>
+    <div class="card">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-sm">
+                    <div class="form-group">
+                        <label for="new-start-date">Start Date</label>
+                        <!--user input calendar date, Bootstrap-->
+                        <input type="date" class="form-control" id="new-start-date">
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="form-group">
+                        <!--same for the end date-->
+                        <label for="new-end-date">End Date</label>
+                        <input type="date" class="form-control" id="new-end-date">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm">
+                    <div class="form-group">
+                        <label for="new-task">Task</label>
+                        <!--test input for items to the list-->
+                        <input type="text" class="form-control" id="new-task" placeholder="Task">
+                    </div>
+                </div>
+            </div>
+            <div>
+                <!--button to add the input to the list. id is "add"-->
+                <button id="add" class="btn btn-primary btn-sm form-control">Create</button>
+            </div>
+        </div>
+    </div>
+    <!--table of list from input-->
+    <table id="list" class="table table-dark table-striped">
+        <tr>
+            <th>Task</th>
+            <th>Date Created</th>
+            <th>Start Date</th>
+            <th>Due Date</th>
+            <th>Actions</th>
+        </tr>
+    </table>
+<!--Linking to the bootstrap js libraries-->
+    <script src="ToDo.js"></script>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+
+</html>
